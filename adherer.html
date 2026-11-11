@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adhérer — Citoyens de la Terre</title>
+    <meta
+      name="description"
+      content="Adhère à Citoyens de la Terre : membre actif, partenaire ou sympathisant."
+    />
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page="adherer">
+    <header class="hdr">
+      <div class="wrap">
+        <a aria-label="Accueil" class="brand" href="index.html">
+          <img alt="" height="36" src="assets/img/logo.svg" width="36" />
+          citoyens de la terre
+        </a>
+        <button
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Menu"
+          class="burger"
+          id="burger"
+          type="button"
+        >
+          <img alt="" height="22" src="assets/icons/menu.svg" width="22" />
+        </button>
+        <nav class="nav" id="nav">
+          <a class="lnk" href="asso.html">L'asso</a>
+          <a class="lnk" href="actions.html">Actions</a>
+          <a class="lnk" href="actus.html">Actus</a>
+          <a class="lnk" href="contact.html">Contact</a>
+          <a aria-current="page" class="btn btn-cream" href="adherer.html">Adhérer</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap sec-sm">
+        <div class="eyebrow">Adhérer</div>
+        <h1 class="h-page mt24">Prends ta carte<br /><span class="lime">de citoyen·ne.</span></h1>
+        <p class="lead mt32 mw-640">
+          Remplis la demande en ligne : on te recontacte vite pour valider ton adhésion. Elle vaut pour
+          l'année civile.
+        </p>
+        <div class="g3 mt48">
+          <div class="formule c-lime" data-formule="0">
+            <div class="k">Membre actif</div>
+            <div class="p">10 €</div>
+            <p>Personne physique qui participe aux actions de l'association.</p>
+          </div>
+          <div class="formule c-cream" data-formule="1">
+            <div class="k">Membre partenaire</div>
+            <div class="p">50 €</div>
+            <p>
+              Personne morale (entreprise, asso, collectivité) qui participe aux actions de l'association.
+            </p>
+          </div>
+          <div class="formule c-orange" data-formule="2">
+            <div class="k">Membre sympathisant</div>
+            <div class="p sm">Prix libre</div>
+            <p>Personne physique ou morale signataire de la charte EVEIL ou AREMDT.</p>
+          </div>
+        </div>
+      </div>
+      <div class="on-cream sec pt-88" id="demande">
+        <div class="wrap adh-grid">
+          <div>
+            <h2 class="fs-36-52 lh-1 ls-n3">Demande d'adhésion en ligne</h2>
+            <div class="card c-white mt32 r-20 p-24">
+              <h3 class="fs-19">Paiement en ligne</h3>
+              <p class="txt mt8">
+                Protégé par un mot de passe. Nouveaux adhérents : tu le reçois après validation. Anciens
+                adhérents : contactez-nous pour l'obtenir.
+              </p>
+              <a
+                class="u mt12 ib fw-700 text-green"
+                data-toast="Espace de paiement protégé (à brancher)."
+                href="#"
+                >Accéder au paiement →</a
+              >
+            </div>
+            <div class="card c-white mt20 r-20 p-24">
+              <h3 class="fs-19">Tu préfères le papier ?</h3>
+              <p class="txt mt8">Télécharge le bulletin, remplis-le et renvoie-le avec ton règlement.</p>
+              <a class="btn btn-ol-dark mt16" data-toast="Le bulletin PDF sera téléchargeable ici." href="#"
+                >Bulletin d'adhésion · PDF 184 Ko</a
+              >
+            </div>
+            <p class="note mt24">
+              Tes informations sont enregistrées dans un fichier de Citoyens de la Terre pour la gestion des
+              contacts, conservées 3 ans et réservées à l'association. Tu peux y accéder et les faire
+              rectifier en écrivant à contact@citoyensdelaterre.org.
+            </p>
+          </div>
+          <form
+            class="form c-white"
+            data-form=""
+            data-ok="Demande envoyée"
+            data-ok-text="Bienvenue parmi les citoyen·nes de la Terre ! On te recontacte vite pour valider ton adhésion (démo : rien n'est réellement envoyé)."
+            id="adhForm"
+            novalidate=""
+          >
+            <div class="fgrid">
+              <div class="field">
+                <label>Nom *</label><input required="" /><span class="err">Champ obligatoire</span>
+              </div>
+              <div class="field">
+                <label>Prénom *</label><input required="" /><span class="err">Champ obligatoire</span>
+              </div>
+              <div class="field full"><label>Raison sociale (personne morale)</label><input /></div>
+              <div class="field">
+                <label>E-mail *</label><input required="" type="email" /><span class="err"
+                  >E-mail valide obligatoire</span
+                >
+              </div>
+              <div class="field"><label>Téléphone</label><input type="tel" /></div>
+              <div class="field full"><label>Adresse postale</label><input /></div>
+              <div class="field"><label>Pays</label><input value="France" /></div>
+              <div class="field"><label>Profession</label><input /></div>
+              <div class="field full">
+                <label>Qualité de membre</label
+                ><select id="qualite">
+                  <option>Membre actif · 10 €</option>
+                  <option>Membre partenaire · 50 €</option>
+                  <option>Membre sympathisant · prix libre</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label>Compétences que tu souhaites acquérir</label><textarea></textarea>
+              </div>
+              <div class="field full">
+                <label>Compétences que tu souhaites partager</label><textarea></textarea>
+              </div>
+            </div>
+            <button class="btn btn-lg btn-dark mt24" type="submit">Envoyer ma demande</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="ftr-s">
+      <div class="wrap">
+        <p class="fw-700">
+          citoyens de la terre<span class="txt fw-400">
+            · 36 traverse des Fabres, 13011 Marseille · 06 61 77 29 00 · contact@citoyensdelaterre.org</span
+          >
+        </p>
+        <div class="legal">
+          <a data-toast="Page à rédiger." href="#">Mentions légales</a
+          ><a data-toast="Page à rédiger." href="#">Confidentialité</a
+          ><a data-toast="Lien Facebook à ajouter." href="#">Facebook</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

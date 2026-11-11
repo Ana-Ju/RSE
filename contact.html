@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Citoyens de la Terre</title>
+    <meta
+      name="description"
+      content="Une idée, un projet, une envie d'aider ? Écris à Citoyens de la Terre."
+    />
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page="contact">
+    <header class="hdr">
+      <div class="wrap">
+        <a aria-label="Accueil" class="brand" href="index.html">
+          <img alt="" height="36" src="assets/img/logo.svg" width="36" />
+          citoyens de la terre
+        </a>
+        <button
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Menu"
+          class="burger"
+          id="burger"
+          type="button"
+        >
+          <img alt="" height="22" src="assets/icons/menu.svg" width="22" />
+        </button>
+        <nav class="nav" id="nav">
+          <a class="lnk" href="asso.html">L'asso</a>
+          <a class="lnk" href="actions.html">Actions</a>
+          <a class="lnk" href="actus.html">Actus</a>
+          <a aria-current="page" class="lnk active" href="contact.html">Contact</a>
+          <a class="btn btn-lime" href="adherer.html">Adhérer</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap sec-sm contact-grid">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h1 class="mt12 fs-52-84 lh-095 ls-n4">Écris-nous.</h1>
+          <p class="txt mt20 fs-20">Une idée, un projet, une envie d'aider ? On répond.</p>
+          <div class="mt32 flex col gap-16">
+            <a class="info" data-copy="06 61 77 29 00" href="#"
+              ><img alt="" class="lic" height="24" src="assets/icons/telephone.svg" width="24" />06 61 77 29
+              00</a
+            >
+            <a class="info" data-copy="contact@citoyensdelaterre.org" href="#"
+              ><img
+                alt=""
+                class="lic"
+                height="24"
+                src="assets/icons/mail.svg"
+                width="24"
+              />contact@citoyensdelaterre.org</a
+            >
+            <div class="info py-16 px-20 fs-18">
+              <img alt="" class="lic" height="24" src="assets/icons/pin.svg" width="24" />
+              <div>Siège social<br /><span class="fw-400">36 traverse des Fabres, 13011 Marseille</span></div>
+            </div>
+          </div>
+          <div
+            class="mapbox mt24 h-220 r-24"
+            data-toast="Le plan d'accès OpenStreetMap se chargera ici, au clic."
+          >
+            <p class="txt">Plan d'accès · chargé seulement si tu cliques</p>
+          </div>
+        </div>
+        <form
+          class="form c-cream"
+          data-form=""
+          data-ok="Message envoyé"
+          data-ok-text="Merci ! L'équipe te répond au plus vite (démo : rien n'est réellement envoyé)."
+          novalidate=""
+        >
+          <div class="fgrid">
+            <div class="field">
+              <label>Nom *</label><input required="" /><span class="err">Champ obligatoire</span>
+            </div>
+            <div class="field">
+              <label>Prénom *</label><input required="" /><span class="err">Champ obligatoire</span>
+            </div>
+            <div class="field full"><label>Organisation</label><input /></div>
+            <div class="field full">
+              <label>E-mail *</label><input required="" type="email" /><span class="err"
+                >E-mail valide obligatoire</span
+              >
+            </div>
+            <div class="field full">
+              <label>Message *</label><textarea class="mh-176" required=""></textarea
+              ><span class="err">Champ obligatoire</span>
+            </div>
+          </div>
+          <button class="btn btn-lg btn-dark mt24" type="submit">Envoyer</button>
+          <p class="note mt20">
+            * champs obligatoires. Données conservées 3 ans et réservées à l'association. Droit d'accès et de
+            rectification auprès de Virginie Vaicbourdt.
+          </p>
+        </form>
+      </div>
+      <div class="wrap g2 pb-80 gap-16">
+        <div class="link-card" data-toast="Lien Facebook à ajouter.">
+          <h3>Suis-nous sur Facebook →</h3>
+          <p class="txt">Toutes nos actus, au quotidien.</p>
+        </div>
+        <a class="link-card" href="asso.html#partenaires"
+          ><h3>Nos partenaires →</h3>
+          <p class="txt">Publics et privés, en Provence et en Méditerranée.</p></a
+        >
+      </div>
+    </main>
+
+    <footer class="ftr-s">
+      <div class="wrap d-block">
+        <p class="txt fs-14">Exempt de TVA conformément au § 19 de la loi sur la TVA (micro-entreprise).</p>
+        <div class="legal mt16">
+          <a data-toast="Page à rédiger." href="#">Mentions légales</a
+          ><a data-toast="Page à rédiger." href="#">Politique de confidentialité</a
+          ><a data-toast="Page à venir." href="#">Plan du site</a
+          ><a data-toast="Page à rédiger." href="#">Garantie légale</a
+          ><a data-toast="Page à rédiger." href="#">Rétractation du contrat</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

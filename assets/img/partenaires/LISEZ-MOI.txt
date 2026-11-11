@@ -1,0 +1,4 @@
+Logos des partenaires (de préférence en .svg, sinon .png sur fond transparent).
+Nommer les fichiers par nom du partenaire, par exemple : symbiose-vallee.svg
+Puis, dans asso.html, remplacer chaque <div class="logo-box">Logo n</div> par :
+<div class="logo-box"><img src="assets/img/partenaires/symbiose-vallee.svg" alt="Symbiose Vallée"></div>

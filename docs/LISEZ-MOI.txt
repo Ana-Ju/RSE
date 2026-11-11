@@ -1,0 +1,4 @@
+Documents à télécharger depuis le site :
+- bulletin-adhesion.pdf  (page Adhérer, bouton « Bulletin d'adhésion »)
+- charte-aremdt.pdf      (page Actions, bouton « Charte AREMDT »)
+Une fois les fichiers ici, remplacer dans le HTML  href="#" data-toast="…"  par  href="docs/nom-du-fichier.pdf".

@@ -1,0 +1,4 @@
+Photos de l'équipe (format carré, 600 × 600 px conseillé, en .webp ou .jpg).
+Nommer les fichiers par prénom-nom, par exemple : axel-frick.webp
+Puis, dans asso.html, remplacer chaque bloc <div class="ph">…</div> par :
+<img class="ph" src="assets/img/equipe/axel-frick.webp" alt="Axel Frick">
