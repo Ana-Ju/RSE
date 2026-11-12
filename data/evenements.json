@@ -1,20 +1,16 @@
 [
   {
-    "titre": "Assemblée générale : un événement citoyen",
-    "date": "2026-06-13",
-    "horaires": "",
-    "lieu": "Château de Bois Luzy, Marseille",
-    "resume": "Au Château de Bois Luzy, entouré d'un parc boisé. Pas dispo ? Pensez à donner procuration.",
-    "partenaires": "",
-    "lien_inscription": ""
+    "titre": "Assemblée trimestrielle : un engagement citoyen",
+    "date": "2026-11-12",
+    "lieu": "Test Lieu",
+    "resume": "Test es",
+    "partenaires": "Telecom sudparis"
   },
   {
     "titre": "Atelier « Économie circulaire » : une opportunité d'innovation pour les entreprises citoyennes et le territoire",
     "date": "2026-05-19",
-    "horaires": "",
     "lieu": "IKEA La Valentine, Marseille 11e",
     "resume": "Avec l'écosystème Symbiose Vallée, LEHV, PICTO et Amerma.",
-    "partenaires": "",
     "lien_inscription": "https://www.helloasso.com/"
   },
   {
@@ -23,7 +19,6 @@
     "horaires": "8h30–10h30",
     "lieu": "Centre de production d'eau potable de Sainte-Marthe, Marseille 14e",
     "resume": "Visite de terrain puis atelier d'intelligence territoriale vers une feuille de route : économies d'eau, réutilisation des eaux usées traitées (REUT), solutions circulaires, renaturation, solutions fondées sur la nature.",
-    "partenaires": "LEHV, SEM, EPAGE HUCA, Garcia Ingénierie, Pôle ALPHA, APAGE. Gratuit, inscription obligatoire.",
-    "lien_inscription": ""
+    "partenaires": "LEHV, SEM, EPAGE HUCA, Garcia Ingénierie, Pôle ALPHA, APAGE. Gratuit, inscription obligatoire."
   }
 ]
