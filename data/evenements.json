@@ -1,6 +1,6 @@
 [
   {
-    "titre": "Assemblée trimestrielle : un engagement citoyen",
+    "titre": "Assemblée mensuelle: un engagement citoyen",
     "date": "2026-11-12",
     "lieu": "Test Lieu",
     "resume": "Test es",
@@ -28,5 +28,12 @@
     "lieu": "Palaiseau",
     "resume": "blhdewndewfbdj3rbfre4v",
     "partenaires": "test etst ets "
+  },
+  {
+    "titre": "Apero Citoyen",
+    "date": "2026-09-10",
+    "horaires": "10h00",
+    "resume": "Rencontre entre membres pour partager de bonnes infos",
+    "partenaires": "Telecom SUdparis"
   }
 ]
