@@ -125,7 +125,7 @@
       var height = Math.min(form.offsetHeight, 420);
       form.innerHTML =
         '<div class="success" style="min-height:' + height + 'px;justify-content:center">' +
-        '<div class="check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0f2a1e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>' +
+        '<div class="check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#13294b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>' +
         "<h3>" + form.getAttribute("data-ok") + "</h3>" +
         '<p class="note" style="font-size:16px">' + form.getAttribute("data-ok-text") + "</p>" +
         "</div>";

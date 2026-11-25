@@ -34,15 +34,29 @@ citoyens-de-la-terre/
 grilles et cartes, puis une section par page, l'adaptation mobile, et enfin les classes
 utilitaires (`fs-21`, `mw-760`, `pb-80`…) pour les petits ajustements propres à la maquette.
 
-Les couleurs sont définies une seule fois en haut du fichier :
+Les couleurs sont définies une seule fois en haut du fichier, en deux étages :
 
-| Variable   | Couleur   | Usage                            |
-|------------|-----------|----------------------------------|
-| `--bg`     | `#0f2a1e` | fond vert sombre, texte foncé    |
-| `--lime`   | `#c8f04a` | accent principal, boutons        |
-| `--orange` | `#ff8a5b` | accent secondaire                |
-| `--cream`  | `#f3f1e7` | sections claires, texte clair    |
-| `--mint`   | `#cfe3d8` | texte secondaire sur fond sombre |
+1. **La palette**, reprise de la zone « Style » du Figma : `--encre`, `--ardoise`, `--ocean`,
+   `--azur`, `--glacier`, `--corail`, `--creme`, `--sable`, `--trait`, `--blanc`.
+2. **Les rôles**, seuls utilisés dans le reste de la feuille :
+
+| Rôle              | Couleur actuelle     | Usage                                          |
+|-------------------|----------------------|------------------------------------------------|
+| `--bg`            | sable `#efe5d0`      | fond de page                                   |
+| `--bg-soft`       | crème `#f8f3e8`      | en-tête, sections et cartes claires            |
+| `--surface`       | blanc                | cartes blanches, champs de formulaire          |
+| `--text`          | bleu encre `#13294b` | titres et texte principal                      |
+| `--text-soft`     | ardoise `#44607f`    | texte secondaire                               |
+| `--accent`        | azur `#7db9ec`       | boutons et cartes mis en avant                 |
+| `--accent-strong` | bleu océan `#1e63b5` | petits titres, chiffres clés, liens, icônes    |
+| `--accent-2`      | corail `#f89901`     | second accent                                  |
+| `--border`        | `#dcd2be`            | bordures et séparateurs                        |
+| `--strong`        | bleu encre `#13294b` | boutons et cartes foncés                       |
+
+Pour changer l'ambiance du site, il suffit de modifier ces variables.
+Les classes portent le nom de leur rôle, pas de leur couleur : `btn-accent`, `btn-strong`,
+`btn-outline`, `c-accent`, `c-soft`, `c-strong`, `on-soft`…
+Les icônes (`assets/icons/`) ont leur couleur inscrite dans le fichier SVG.
 
 Police : Bricolage Grotesque (Google Fonts).
 
@@ -54,7 +68,6 @@ Tout ce qui n'est pas encore relié affiche un petit message au clic (attribut `
 - **Liens externes** : Facebook, HelloAsso, aremdt.org, espace de paiement.
 - **Médias** : vidéo de présentation, vidéo du projet trame verte et bleue, carte uMap, plan d'accès.
 - **Contenus** : photos de l'équipe, logos des partenaires, PDF (bulletin d'adhésion, charte AREMDT), pages Mentions légales / Confidentialité / Plan du site.
-- **Logo** : `assets/img/logo.svg` est une reconstitution, à remplacer par le fichier officiel.
 
 ## CMS (MVP) : les événements
 
