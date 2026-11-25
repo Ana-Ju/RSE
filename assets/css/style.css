@@ -3,19 +3,33 @@
    Couleurs et typo issues de la maquette Figma « RSE »
    ========================================================= */
 :root {
-  --bg: #0f2a1e;
-  --line: #24483a;
-  --border: #3c6b57;
-  --card: #183e2e;
-  --cream: #f3f1e7;
-  --mint: #cfe3d8;
-  --lime: #c8f04a;
-  --orange: #ff8a5b;
-  --green: #2f6b4f;
-  --body: #2e4a3d;
-  --muted: #a9c4b6;
-  --photo: #dce8df;
-  --white: #fff;
+  /* Palette — zone « Style » de la maquette Figma */
+  --encre: #13294b;
+  --ardoise: #44607f;
+  --ocean: #1e63b5;
+  --azur: #7db9ec;
+  --glacier: #d6e7f7;
+  --corail: #f89901;
+  --creme: #f8f3e8;
+  --sable: #efe5d0;
+  --trait: #dcd2be;
+  --blanc: #ffffff;
+
+  /* Rôles — le reste de la feuille n'utilise que ceux-ci.
+     Pour changer l'ambiance du site, il suffit de modifier la palette ou ces lignes. */
+  --bg: var(--sable); /* fond de page */
+  --bg-soft: var(--creme); /* en-tête, sections et cartes claires */
+  --surface: var(--blanc); /* cartes blanches, champs de formulaire */
+  --text: var(--encre); /* titres et texte principal */
+  --text-soft: var(--ardoise); /* texte secondaire */
+  --accent: var(--azur); /* boutons et cartes mis en avant */
+  --accent-strong: var(--ocean); /* petits titres, chiffres clés, liens, icônes */
+  --accent-2: var(--corail); /* second accent */
+  --border: var(--trait); /* bordures et séparateurs */
+  --strong: var(--encre); /* boutons et cartes foncés */
+  --on-strong: var(--creme); /* texte sur fond foncé */
+  --on-strong-soft: var(--glacier); /* texte secondaire sur fond foncé */
+  --error: #b3261e;
 }
 * {
   box-sizing: border-box;
@@ -27,7 +41,7 @@ html {
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--cream);
+  color: var(--text);
   font-family: "Bricolage Grotesque", system-ui, sans-serif;
   font-variation-settings: "opsz" 14;
   font-optical-sizing: none;
@@ -67,15 +81,15 @@ svg {
   padding: 0 24px;
 }
 .ink {
-  color: var(--bg);
+  color: var(--text);
 }
 .u {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
-.lime {
-  color: var(--lime);
+.accent {
+  color: var(--accent-strong);
 }
 .hidden {
   display: none !important;
@@ -90,8 +104,8 @@ svg {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
 }
 .hdr .wrap {
   display: flex;
@@ -120,10 +134,10 @@ svg {
   transition: color 0.15s;
 }
 .nav a.lnk:hover {
-  color: var(--lime);
+  color: var(--accent-strong);
 }
 .nav a.lnk.active {
-  color: var(--lime);
+  color: var(--accent-strong);
   font-weight: 700;
 }
 .nav .btn {
@@ -133,7 +147,7 @@ svg {
   display: none;
   background: none;
   border: 1px solid var(--border);
-  color: var(--cream);
+  color: var(--text);
   border-radius: 999px;
   width: 48px;
   height: 48px;
@@ -178,30 +192,30 @@ svg {
   padding: 0 32px;
   font-size: 20px;
 }
-.btn-lime {
-  background: var(--lime);
-  color: var(--bg);
+.btn-accent {
+  background: var(--accent);
+  color: var(--text);
 }
-.btn-cream {
-  background: var(--cream);
-  color: var(--bg);
+.btn-soft {
+  background: var(--bg-soft);
+  color: var(--text);
 }
-.btn-dark {
-  background: var(--bg);
-  color: var(--cream);
+.btn-strong {
+  background: var(--strong);
+  color: var(--on-strong);
 }
-.btn-ol-light {
-  border-color: var(--cream);
-  color: var(--cream);
+.btn-ghost {
+  border-color: var(--border);
+  color: var(--text);
 }
-.btn-ol-dark {
-  border-color: var(--bg);
-  color: var(--bg);
+.btn-outline {
+  border-color: var(--strong);
+  color: var(--text);
   background: transparent;
 }
 .btn-dash {
-  border: 2px dashed var(--green);
-  color: var(--body);
+  border: 2px dashed var(--accent-strong);
+  color: var(--text-soft);
   font-weight: 400;
   background: transparent;
 }
@@ -217,7 +231,7 @@ svg {
   padding: 0 16px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  color: var(--mint);
+  color: var(--text-soft);
   font-size: 16px;
   cursor: pointer;
   transition:
@@ -226,20 +240,20 @@ svg {
   background: transparent;
 }
 .chip:hover {
-  border-color: var(--lime);
-  color: var(--cream);
+  border-color: var(--accent-strong);
+  color: var(--text);
 }
 .chip.solid {
   border: none;
   font-weight: 700;
-  color: var(--bg);
+  color: var(--text);
   height: 48px;
   padding: 0 18px;
 }
 .chip.on {
-  background: var(--lime);
-  color: var(--bg);
-  border-color: var(--lime);
+  background: var(--accent);
+  color: var(--text);
+  border-color: var(--accent);
   font-weight: 700;
 }
 .tag {
@@ -249,13 +263,13 @@ svg {
   padding: 0 12px;
   border-radius: 999px;
   border: 2px solid var(--border);
-  color: var(--mint);
+  color: var(--text-soft);
   font-weight: 700;
   font-size: 14px;
 }
-.tag.dark {
-  border-color: var(--bg);
-  color: var(--bg);
+.tag.strong {
+  border-color: var(--strong);
+  color: var(--text);
 }
 .pill {
   display: inline-flex;
@@ -263,9 +277,22 @@ svg {
   height: 44px;
   padding: 0 18px;
   border-radius: 999px;
-  background: var(--card);
+  background: var(--surface);
   font-weight: 600;
   font-size: 16px;
+}
+
+/* Cartes foncées (bleu encre) */
+.c-strong .txt {
+  color: var(--on-strong-soft);
+}
+.c-strong .date {
+  color: var(--accent);
+}
+/* Bouton « Adhérer » de l'en-tête quand on est sur la page Adhérer */
+.btn-current {
+  background: var(--bg);
+  color: var(--text);
 }
 
 /* ---------- Type ---------- */
@@ -274,13 +301,13 @@ svg {
   font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--lime);
+  color: var(--accent-strong);
 }
-.on-cream .eyebrow {
-  color: var(--green);
+.on-soft .eyebrow {
+  color: var(--accent-strong);
 }
 .on-color .eyebrow {
-  color: var(--bg);
+  color: var(--text);
 }
 .h-hero {
   font-size: clamp(52px, 7.4vw, 104px);
@@ -305,17 +332,17 @@ svg {
 .lead {
   font-size: clamp(18px, 1.6vw, 21px);
   line-height: 1.5;
-  color: var(--mint);
+  color: var(--text-soft);
 }
-.on-cream {
-  background: var(--cream);
-  color: var(--bg);
+.on-soft {
+  background: var(--bg-soft);
+  color: var(--text);
 }
-.on-cream .txt {
-  color: var(--body);
+.on-soft .txt {
+  color: var(--text-soft);
 }
 .txt {
-  color: var(--mint);
+  color: var(--text-soft);
 }
 .sec {
   padding-top: 96px;
@@ -387,36 +414,36 @@ main {
   padding: 28px;
 }
 .c-white {
-  background: var(--white);
-  color: var(--bg);
+  background: var(--surface);
+  color: var(--text);
 }
 .c-white .txt,
-.c-cream .txt {
-  color: var(--body);
+.c-soft .txt {
+  color: var(--text-soft);
 }
-.c-cream {
-  background: var(--cream);
-  color: var(--bg);
+.c-soft {
+  background: var(--bg-soft);
+  color: var(--text);
 }
-.c-dark {
-  background: var(--card);
-  color: var(--cream);
+.c-white {
+  background: var(--surface);
+  color: var(--text);
 }
-.c-ink {
-  background: var(--bg);
-  color: var(--cream);
+.c-strong {
+  background: var(--strong);
+  color: var(--on-strong);
 }
-.c-lime {
-  background: var(--lime);
-  color: var(--bg);
+.c-accent {
+  background: var(--accent);
+  color: var(--text);
 }
-.c-orange {
-  background: var(--orange);
-  color: var(--bg);
+.c-accent2 {
+  background: var(--accent-2);
+  color: var(--text);
 }
-.c-lime .txt,
-.c-orange .txt {
-  color: var(--bg);
+.c-accent .txt,
+.c-accent2 .txt {
+  color: var(--text);
 }
 .card h3 {
   font-size: 22px;
@@ -425,11 +452,11 @@ main {
 .card .date {
   font-weight: 700;
   font-size: 14px;
-  color: var(--lime);
+  color: var(--accent-strong);
 }
-.c-cream .date,
+.c-soft .date,
 .c-white .date {
-  color: var(--green);
+  color: var(--accent-strong);
 }
 .clickable {
   cursor: pointer;
@@ -455,13 +482,13 @@ main {
   padding: 0 14px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  color: var(--mint);
+  color: var(--text-soft);
   font-size: 14px;
 }
 .combat {
   border-radius: 28px;
   padding: 28px;
-  color: var(--bg);
+  color: var(--text);
 }
 .combat .k {
   font-weight: 700;
@@ -481,23 +508,23 @@ main {
   gap: 12px;
 }
 .stats {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   padding: 32px 0;
 }
 .stats .g4 .v {
   font-weight: 800;
   font-size: clamp(30px, 3.2vw, 44px);
   line-height: 1.5;
-  color: var(--lime);
+  color: var(--accent-strong);
 }
 .stats .g4 .l {
-  color: var(--mint);
+  color: var(--text-soft);
 }
 .ic {
   width: 40px;
   height: 40px;
-  stroke: var(--bg);
+  stroke: var(--text);
   fill: none;
   stroke-width: 1.6;
   stroke-linecap: round;
@@ -559,11 +586,11 @@ main {
   grid-template-columns: 184px 1fr auto;
   align-items: center;
   gap: 16px;
-  border-top: 2px solid var(--bg);
+  border-top: 2px solid var(--strong);
   padding: 28px 0;
 }
 .agenda-row:last-child {
-  border-bottom: 2px solid var(--bg);
+  border-bottom: 2px solid var(--strong);
 }
 .agenda-row .d {
   font-weight: 800;
@@ -581,11 +608,11 @@ main {
   line-height: 1.5;
 }
 .agenda-row .m {
-  color: var(--body);
+  color: var(--text-soft);
 }
 .join {
-  background: var(--lime);
-  color: var(--bg);
+  background: var(--accent);
+  color: var(--text);
   border-radius: 40px;
   padding: 48px;
   display: flex;
@@ -605,7 +632,7 @@ main {
   max-width: 620px;
 }
 .ftr {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
   padding: 48px 0 40px;
 }
 .ftr-grid {
@@ -631,7 +658,7 @@ main {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  color: var(--muted);
+  color: var(--text-soft);
   font-size: 14px;
 }
 .legal a {
@@ -639,7 +666,7 @@ main {
   text-underline-offset: 3px;
 }
 .ftr-s {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
   padding: 40px 0;
 }
 .ftr-s .wrap {
@@ -666,17 +693,17 @@ main {
   font-weight: 800;
   font-size: 32px;
   line-height: 1.5;
-  color: var(--lime);
+  color: var(--accent-strong);
 }
 .timeline-row p {
   font-size: 19px;
-  color: var(--mint);
+  color: var(--text-soft);
 }
 .video {
   display: flex;
   align-items: center;
   gap: 20px;
-  background: var(--card);
+  background: var(--surface);
   border-radius: 24px;
   padding: 24px;
   cursor: pointer;
@@ -689,26 +716,26 @@ main {
   width: 64px;
   height: 64px;
   border-radius: 999px;
-  background: var(--lime);
+  background: var(--accent);
   display: grid;
   place-items: center;
   flex: none;
 }
 .person {
-  background: var(--white);
+  background: var(--surface);
   border-radius: 24px;
   padding: 24px;
-  color: var(--bg);
+  color: var(--text);
 }
 .ph {
   aspect-ratio: 1;
-  background: var(--photo);
+  background: var(--bg-soft);
   border-radius: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--green);
+  color: var(--accent-strong);
 }
 .ph b {
   font-weight: 800;
@@ -717,7 +744,7 @@ main {
 }
 .ph small {
   font-size: 12px;
-  color: var(--body);
+  color: var(--text-soft);
 }
 .person h3 {
   font-size: 22px;
@@ -726,12 +753,12 @@ main {
 }
 .person .role {
   font-weight: 700;
-  color: var(--green);
+  color: var(--accent-strong);
   margin-top: 4px;
 }
 .person .desc {
   font-size: 15px;
-  color: var(--body);
+  color: var(--text-soft);
   margin-top: 8px;
 }
 .logos {
@@ -746,7 +773,7 @@ main {
   border-radius: 16px;
   display: grid;
   place-items: center;
-  color: var(--muted);
+  color: var(--text-soft);
   font-size: 13px;
 }
 .pgroup {
@@ -755,14 +782,14 @@ main {
 }
 .pgroup span {
   font-weight: 500;
-  color: var(--muted);
+  color: var(--text-soft);
 }
 
 /* ---------- Forms ---------- */
 .form {
   border-radius: 28px;
   padding: 32px;
-  color: var(--bg);
+  color: var(--text);
 }
 .fgrid {
   display: grid;
@@ -787,12 +814,12 @@ main {
   width: 100%;
   min-width: 0;
   height: 56px;
-  border: 2px solid var(--bg);
+  border: 2px solid var(--strong);
   border-radius: 12px;
-  background: #fff;
+  background: var(--surface);
   padding: 0 16px;
   font-size: 16px;
-  color: var(--bg);
+  color: var(--text);
   outline: none;
   transition: box-shadow 0.15s;
 }
@@ -805,24 +832,24 @@ main {
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-  box-shadow: 0 0 0 4px rgba(200, 240, 74, 0.55);
+  box-shadow: 0 0 0 4px rgba(125, 185, 236, 0.6);
 }
 .field .err {
   display: none;
-  color: #b3261e;
+  color: var(--error);
   font-size: 14px;
 }
 .field.invalid input,
 .field.invalid select,
 .field.invalid textarea {
-  border-color: #b3261e;
+  border-color: var(--error);
 }
 .field.invalid .err {
   display: block;
 }
 .note {
   font-size: 14px;
-  color: var(--body);
+  color: var(--text-soft);
   line-height: 1.5;
 }
 .success {
@@ -835,7 +862,7 @@ main {
   width: 64px;
   height: 64px;
   border-radius: 999px;
-  background: var(--lime);
+  background: var(--accent);
   display: grid;
   place-items: center;
 }
@@ -853,7 +880,7 @@ main {
   display: grid;
   grid-template-columns: 284px 1fr;
   gap: 24px;
-  background: var(--card);
+  background: var(--surface);
   border-radius: 28px;
   padding: 36px;
 }
@@ -864,7 +891,7 @@ main {
 }
 .acc p {
   font-size: 18px;
-  color: var(--mint);
+  color: var(--text-soft);
 }
 .period {
   display: inline-flex;
@@ -874,10 +901,10 @@ main {
   border: 1px solid var(--border);
   border-radius: 999px;
   font-size: 14px;
-  color: var(--mint);
+  color: var(--text-soft);
 }
 .sub-ol {
-  border: 2px solid var(--bg);
+  border: 2px solid var(--strong);
   border-radius: 18px;
   padding: 20px;
 }
@@ -886,14 +913,14 @@ main {
 }
 .sub-ol p {
   font-size: 16px;
-  color: var(--body);
+  color: var(--text-soft);
   margin-top: 8px;
 }
 .big-ol {
-  border: 2px solid var(--bg);
+  border: 2px solid var(--strong);
   border-radius: 28px;
   padding: 32px;
-  color: var(--bg);
+  color: var(--text);
 }
 .big-ol h3 {
   font-size: 24px;
@@ -905,7 +932,7 @@ main {
 .ev {
   border-radius: 28px;
   padding: 32px;
-  color: var(--bg);
+  color: var(--text);
 }
 .ev .d {
   font-weight: 800;
@@ -928,11 +955,11 @@ main {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 16px;
-  border-top: 2px solid var(--bg);
+  border-top: 2px solid var(--strong);
   padding: 22px 0;
 }
 .news-row:last-child {
-  border-bottom: 2px solid var(--bg);
+  border-bottom: 2px solid var(--strong);
 }
 .news-row .d {
   font-weight: 800;
@@ -944,7 +971,7 @@ main {
   line-height: 1.5;
 }
 .news-row p {
-  color: var(--body);
+  color: var(--text-soft);
   margin-top: 4px;
 }
 .mapbox {
@@ -963,7 +990,7 @@ main {
   position: relative;
 }
 .mapbox:hover {
-  border-color: var(--lime);
+  border-color: var(--accent-strong);
 }
 .mapbox .t {
   font-weight: 700;
@@ -981,7 +1008,7 @@ main {
   display: flex;
   align-items: center;
   gap: 14px;
-  background: var(--card);
+  background: var(--surface);
   border-radius: 20px;
   padding: 0 20px;
   min-height: 66px;
@@ -1007,7 +1034,7 @@ main {
   transition: border-color 0.2s;
 }
 .link-card:hover {
-  border-color: var(--lime);
+  border-color: var(--accent-strong);
 }
 .link-card h3 {
   font-size: 22px;
@@ -1016,7 +1043,7 @@ main {
 .lic {
   width: 24px;
   height: 24px;
-  stroke: var(--lime);
+  stroke: var(--accent-strong);
   fill: none;
   stroke-width: 1.8;
   stroke-linecap: round;
@@ -1027,7 +1054,7 @@ main {
 .formule {
   border-radius: 28px;
   padding: 36px;
-  color: var(--bg);
+  color: var(--text);
   cursor: pointer;
   transition:
     transform 0.2s,
@@ -1038,7 +1065,7 @@ main {
   transform: translateY(-3px);
 }
 .formule.sel {
-  box-shadow: 0 0 0 4px var(--cream);
+  box-shadow: 0 0 0 4px var(--accent-strong);
 }
 .formule .k {
   font-weight: 700;
@@ -1072,12 +1099,12 @@ main {
   left: 50%;
   bottom: 24px;
   transform: translateX(-50%) translateY(20px);
-  background: var(--cream);
-  color: var(--bg);
+  background: var(--strong);
+  color: var(--on-strong);
   padding: 14px 22px;
   border-radius: 999px;
   font-weight: 600;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(19, 41, 75, 0.25);
   opacity: 0;
   pointer-events: none;
   transition: all 0.25s;
@@ -1123,11 +1150,11 @@ main {
     top: 88px;
     left: 0;
     right: 0;
-    background: var(--bg);
+    background: var(--bg-soft);
     flex-direction: column;
     align-items: stretch;
     padding: 16px 24px 24px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
     gap: 4px;
   }
   .nav.open {
@@ -1218,17 +1245,17 @@ main {
 }
 
 /* ---------- Utilitaires (petits ajustements issus de la maquette) ---------- */
-.bg-lime {
-  background: var(--lime) !important;
+.bg-accent {
+  background: var(--accent) !important;
 }
-.bg-cream {
-  background: var(--cream) !important;
+.bg-soft {
+  background: var(--bg-soft) !important;
 }
-.bg-mint {
-  background: var(--mint) !important;
+.bg-glacier {
+  background: var(--glacier) !important;
 }
-.bg-orange {
-  background: var(--orange) !important;
+.bg-accent2 {
+  background: var(--accent-2) !important;
 }
 .col {
   flex-direction: column !important;
@@ -1457,8 +1484,8 @@ main {
 .self-start {
   align-self: flex-start !important;
 }
-.text-green {
-  color: var(--green) !important;
+.text-accent {
+  color: var(--accent-strong) !important;
 }
 .wrap-items {
   flex-wrap: wrap !important;

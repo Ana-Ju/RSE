@@ -46,14 +46,14 @@
         cartes.innerHTML = evts.map(function (e, i) {
           var infos = [e._d.getFullYear(), e.horaires, e.lieu].filter(Boolean).map(esc).join(" · ");
           var lien = lienSur(e.lien_inscription);
-          return '<article class="ev ' + (i === 0 ? "c-lime" : "c-cream") + ' flex col">' +
+          return '<article class="ev ' + (i === 0 ? "c-accent" : "c-soft") + ' flex col">' +
             '<div class="d">' + jourMois(e._d) + "</div>" +
             '<div class="s">' + infos + "</div>" +
             "<h3>" + esc(e.titre) + "</h3>" +
             (e.resume ? '<p class="txt">' + esc(e.resume) + "</p>" : "") +
             (e.partenaires ? '<p class="txt fs-15">' + esc(e.partenaires) + "</p>" : "") +
             '<div class="grow"></div>' +
-            (lien ? '<a class="btn btn-dark mt24 self-start" href="' + esc(lien) +
+            (lien ? '<a class="btn btn-strong mt24 self-start" href="' + esc(lien) +
                     '" target="_blank" rel="noopener">Je m\'inscris</a>' : "") +
             "</article>";
         }).join("");
@@ -66,10 +66,10 @@
           var passe = e._d < aujourdHui;
           var lien = lienSur(e.lien_inscription);
           var action = passe
-            ? '<span class="btn btn-ol-dark h-52 cursor-default">Passé</span>'
-            : (lien ? '<a class="btn btn-md btn-dark h-52" href="' + esc(lien) +
+            ? '<span class="btn btn-outline h-52 cursor-default">Passé</span>'
+            : (lien ? '<a class="btn btn-md btn-strong h-52" href="' + esc(lien) +
                       '" target="_blank" rel="noopener">Je m\'inscris</a>'
-                    : '<span class="btn btn-ol-dark h-52 cursor-default">À venir</span>');
+                    : '<span class="btn btn-outline h-52 cursor-default">À venir</span>');
           return '<div class="agenda-row">' +
             '<div><div class="d">' + jourMois(e._d) + '</div><div class="y">' + e._d.getFullYear() + "</div></div>" +
             '<div><div class="t">' + esc(e.titre) + '</div><div class="m">' +
