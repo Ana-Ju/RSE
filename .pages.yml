@@ -1,0 +1,35 @@
+# Configuration de Pages CMS (https://pagescms.org)
+# Les bénévoles modifient data/evenements.json via un formulaire,
+# sans toucher au code. Le site lit ce fichier et affiche les événements
+# sur l'accueil (agenda) et sur la page Actualités.
+content:
+  - name: evenements
+    label: Événements
+    type: file
+    path: data/evenements.json
+    format: json
+    list: true
+    fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: horaires
+        label: Horaires (ex. 8h30–10h30)
+        type: string
+      - name: lieu
+        label: Lieu
+        type: string
+      - name: resume
+        label: Résumé (2 ou 3 phrases)
+        type: text
+      - name: partenaires
+        label: Partenaires et infos pratiques
+        type: string
+      - name: lien_inscription
+        label: Lien d'inscription (HelloAsso…)
+        type: string

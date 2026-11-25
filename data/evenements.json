@@ -1,0 +1,39 @@
+[
+  {
+    "titre": "Assemblée mensuelle: un engagement citoyen",
+    "date": "2026-11-12",
+    "lieu": "Test Lieu",
+    "resume": "Test es",
+    "partenaires": "Telecom sudparis"
+  },
+  {
+    "titre": "Atelier « Économie circulaire » : une opportunité d'innovation pour les entreprises citoyennes et le territoire",
+    "date": "2026-05-19",
+    "lieu": "IKEA La Valentine, Marseille 11e",
+    "resume": "Avec l'écosystème Symbiose Vallée, LEHV, PICTO et Amerma.",
+    "lien_inscription": "https://www.helloasso.com/"
+  },
+  {
+    "titre": "Atelier pour préserver l'eau et la biodiversité de notre territoire",
+    "date": "2026-04-28",
+    "horaires": "8h30–10h30",
+    "lieu": "Centre de production d'eau potable de Sainte-Marthe, Marseille 14e",
+    "resume": "Visite de terrain puis atelier d'intelligence territoriale vers une feuille de route : économies d'eau, réutilisation des eaux usées traitées (REUT), solutions circulaires, renaturation, solutions fondées sur la nature.",
+    "partenaires": "LEHV, SEM, EPAGE HUCA, Garcia Ingénierie, Pôle ALPHA, APAGE. Gratuit, inscription obligatoire."
+  },
+  {
+    "titre": "Ceci est un test",
+    "date": "2026-11-12",
+    "horaires": "8h30 - 10h30",
+    "lieu": "Palaiseau",
+    "resume": "blhdewndewfbdj3rbfre4v",
+    "partenaires": "test etst ets "
+  },
+  {
+    "titre": "Apero Citoyen",
+    "date": "2026-09-10",
+    "horaires": "10h00",
+    "resume": "Rencontre entre membres pour partager de bonnes infos",
+    "partenaires": "Telecom SUdparis"
+  }
+]

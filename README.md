@@ -55,3 +55,23 @@ Tout ce qui n'est pas encore relié affiche un petit message au clic (attribut `
 - **Médias** : vidéo de présentation, vidéo du projet trame verte et bleue, carte uMap, plan d'accès.
 - **Contenus** : photos de l'équipe, logos des partenaires, PDF (bulletin d'adhésion, charte AREMDT), pages Mentions légales / Confidentialité / Plan du site.
 - **Logo** : `assets/img/logo.svg` est une reconstitution, à remplacer par le fichier officiel.
+
+## CMS (MVP) : les événements
+
+Les événements ne sont plus écrits à la main dans le HTML. Ils sont stockés dans
+`data/evenements.json` et affichés automatiquement par `assets/js/evenements.js` :
+
+- page **Actualités** : les cartes des événements, du plus récent au plus ancien ;
+- **Accueil** : l'agenda, avec les événements à venir en haut et la mention « Passé »
+  calculée d'après la date (plus besoin de la mettre à jour à la main).
+
+Le fichier est modifiable sans code avec [Pages CMS](https://pagescms.org) : le formulaire
+« Événements » est défini dans `.pages.yml`. Chaque enregistrement crée un commit, et
+GitHub Pages republie le site.
+
+Le texte saisi dans le CMS est échappé avant affichage (pas d'injection de HTML).
+Si le fichier ne peut pas être lu (site ouvert en double-clic, hors ligne), le contenu
+écrit dans le HTML reste affiché : pour voir les données du CMS, ouvrir le site via
+GitHub Pages ou un petit serveur local (`python3 -m http.server`).
+
+Le lien d'inscription du deuxième événement est un lien générique HelloAsso, à remplacer.
