@@ -66,7 +66,7 @@ Tout ce qui n'est pas encore relié affiche un petit message au clic (attribut `
 
 - **Formulaires** (contact, adhésion, procuration) : vérifient les champs puis affichent une confirmation, mais n'envoient rien. À relier à un service d'envoi (Formspree, HelloAsso, outil de l'asso…).
 - **Liens externes** : Facebook, HelloAsso, aremdt.org, espace de paiement.
-- **Médias** : vidéo de présentation, vidéo du projet trame verte et bleue, carte uMap, plan d'accès.
+- **Médias** : vidéo de présentation, vidéo du projet trame verte et bleue, plan d'accès (la carte des actions est branchée, voir plus bas).
 - **Contenus** : photos de l'équipe, logos des partenaires, PDF (bulletin d'adhésion, charte AREMDT), pages Mentions légales / Confidentialité / Plan du site.
 
 ## CMS (MVP) : les événements
@@ -88,3 +88,25 @@ Si le fichier ne peut pas être lu (site ouvert en double-clic, hors ligne), le 
 GitHub Pages ou un petit serveur local (`python3 -m http.server`).
 
 Le lien d'inscription du deuxième événement est un lien générique HelloAsso, à remplacer.
+
+
+## Page « Éco-conception »
+
+`eco-conception.html` présente, pour l'association et ses partenaires, comment le site
+a été éco-conçu : la comparaison EcoIndex (note D de l'ancien site → note A du nouveau),
+les choix concrets, l'impact estimé et les limites. La page est accessible depuis le
+pied de page de toutes les pages (« En savoir plus → » et lien « Éco-conception »).
+
+## Carte des actions
+
+La section « La carte de nos actions » de `actus.html` affiche les points d'intervention
+de l'association sur une carte OpenStreetMap. Par éco-conception, **la carte ne se charge
+qu'au clic** : tant qu'on ne clique pas, aucune librairie ni tuile n'est téléchargée
+(`assets/js/carte.js` charge Leaflet à la demande). Chaque point renvoie vers l'activité
+correspondante.
+
+Les points sont lus dans `data/points.json` et **modifiables dans le CMS** (rubrique
+« Points de la carte », définie dans `.pages.yml`). Les points actuels sont des exemples
+situés dans la région de Marseille, à remplacer par les vrais points avec l'association.
+Si Leaflet ne peut pas être chargé, la carte affiche un message et le reste de la page
+fonctionne normalement.

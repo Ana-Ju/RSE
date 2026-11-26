@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Un site éco-conçu — Citoyens de la Terre</title>
+    <meta
+      name="description"
+      content="Comment ce site a été éco-conçu : un site léger, noté A sur EcoIndex, contre D pour l'ancien. Nos choix concrets, l'impact mesuré et les limites."
+    />
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      /* Styles propres à cette page, pour ne pas alourdir la feuille globale */
+      .grade {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        font-size: 34px;
+        font-weight: 800;
+        line-height: 1;
+        flex: none;
+      }
+      .grade-d {
+        background: var(--sable);
+        color: var(--ardoise);
+        border: 2px solid var(--border);
+      }
+      .grade-a {
+        background: var(--accent-strong);
+        color: var(--creme);
+      }
+      .score-head {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .score-head .s {
+        font-size: 14px;
+        color: var(--text-soft);
+      }
+      .score-head .s b {
+        display: block;
+        font-size: 20px;
+        color: var(--text);
+      }
+      .metrics {
+        list-style: none;
+        margin: 24px 0 0;
+        padding: 0;
+      }
+      .metrics li {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+        border-top: 1px solid var(--border);
+        font-size: 15px;
+      }
+      .metrics li span:last-child {
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .delta {
+        display: inline-block;
+        margin-left: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--accent-strong);
+      }
+    </style>
+  </head>
+  <body data-page="eco-conception">
+    <header class="hdr">
+      <div class="wrap">
+        <a aria-label="Accueil" class="brand" href="index.html">
+          <img alt="" height="52" src="assets/img/logo.svg" width="52" />
+          citoyens de la terre
+        </a>
+        <button
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Menu"
+          class="burger"
+          id="burger"
+          type="button"
+        >
+          <img alt="" height="22" src="assets/icons/menu.svg" width="22" />
+        </button>
+        <nav class="nav" id="nav">
+          <a class="lnk" href="asso.html">L'asso</a>
+          <a class="lnk" href="actions.html">Actions</a>
+          <a class="lnk" href="actus.html">Actus</a>
+          <a class="lnk" href="contact.html">Contact</a>
+          <a class="btn btn-accent" href="adherer.html">Adhérer</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap sec-sm">
+        <div class="eyebrow mt40">Notre démarche</div>
+        <h1 class="h-page mt16 mw-820">Un site pensé pour peser le moins possible.</h1>
+        <p class="lead mt32 mw-760">
+          Un site web a une empreinte réelle : électricité des serveurs, données transférées, fabrication des
+          appareils. Avant de concevoir ce nouveau site, on a mesuré celui de l'association pour partir d'un
+          point de comparaison, puis on a tout repensé pour un site plus léger, plus rapide et plus facile à
+          faire vivre.
+        </p>
+        <div class="row mt32 gap-8">
+          <span class="pill">Note A sur EcoIndex</span><span class="pill">0,14 Mo par page</span
+          ><span class="pill">8 requêtes</span>
+        </div>
+      </div>
+
+      <div class="on-soft py-88">
+        <div class="wrap">
+          <div class="eyebrow">Avant / après</div>
+          <h2 class="h2s mt16">De la note D à la note A.</h2>
+          <p class="txt mt16 fs-19 mw-700">
+            On a mesuré l'ancien site et le nouveau avec EcoIndex, l'outil du collectif Green IT. Il note une
+            page de 0 à 100 d'après son poids, sa complexité et son nombre de requêtes.
+          </p>
+          <div class="g2 gap-48 mt40 items-start">
+            <div class="card c-white r-24">
+              <div class="score-head">
+                <span class="grade grade-d">D</span>
+                <span class="s">Ancien site (Jimdo)<b>54 / 100</b></span>
+              </div>
+              <ul class="metrics">
+                <li><span>Poids de la page</span><span>3,14 Mo</span></li>
+                <li><span>Requêtes</span><span>47</span></li>
+                <li><span>Éléments de la page</span><span>565</span></li>
+                <li><span>CO₂e par page vue</span><span>1,92 g</span></li>
+              </ul>
+            </div>
+            <div class="card c-white r-24">
+              <div class="score-head">
+                <span class="grade grade-a">A</span>
+                <span class="s">Nouveau site<b>86 / 100</b></span>
+              </div>
+              <ul class="metrics">
+                <li><span>Poids de la page</span><span>0,14 Mo<span class="delta">−95 %</span></span></li>
+                <li><span>Requêtes</span><span>8<span class="delta">−83 %</span></span></li>
+                <li><span>Éléments de la page</span><span>240<span class="delta">−58 %</span></span></li>
+                <li><span>CO₂e par page vue</span><span>1,29 g<span class="delta">−33 %</span></span></li>
+              </ul>
+            </div>
+          </div>
+          <p class="txt mt24 fs-15 mw-700">
+            La baisse du CO₂e est plus modérée que celle du poids : EcoIndex part d'une page moyenne et ne
+            descend jamais sous 1 g par page. L'économie réelle sur les données transférées, elle, atteint
+            95 %.
+          </p>
+        </div>
+      </div>
+
+      <div class="wrap sec">
+        <div class="eyebrow">Nos choix</div>
+        <h2 class="h2s mt16">Concrètement, qu'est-ce qu'on a fait ?</h2>
+        <div class="g3 gap-20 mt40">
+          <div class="card c-soft r-20">
+            <h3>Un site statique</h3>
+            <p class="txt mt8">
+              Pas de base de données : les pages sont servies telles quelles. C'est plus rapide, plus léger et
+              plus sûr.
+            </p>
+          </div>
+          <div class="card c-soft r-20">
+            <h3>Une seule police, des icônes en SVG</h3>
+            <p class="txt mt8">
+              Moins de fichiers à télécharger. Les icônes sont des dessins légers plutôt que des images.
+            </p>
+          </div>
+          <div class="card c-soft r-20">
+            <h3>Rien de lourd chargé d'office</h3>
+            <p class="txt mt8">
+              Aucune vidéo ni tracker. La vidéo et la carte ne se chargent que si on clique dessus.
+            </p>
+          </div>
+          <div class="card c-soft r-20">
+            <h3>Des images optimisées</h3>
+            <p class="txt mt8">
+              Format WebP, taille adaptée à l'écran, logos des partenaires regroupés pour éviter une requête
+              par image.
+            </p>
+          </div>
+          <div class="card c-soft r-20">
+            <h3>Mis à jour sans code</h3>
+            <p class="txt mt8">
+              L'équipe gère le contenu elle-même, par un formulaire, sans ajouter d'outil lourd sur le site
+              public.
+            </p>
+          </div>
+          <div class="card c-soft r-20">
+            <h3>Mesuré à chaque étape</h3>
+            <p class="txt mt8">
+              On vérifie la note EcoIndex avant chaque mise en ligne, avec la note A comme objectif à tenir.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="on-soft py-88">
+        <div class="wrap g2 gap-48 items-start">
+          <div>
+            <div class="eyebrow">Ce que ça représente</div>
+            <h2 class="h2s mt16">Un ordre de grandeur, pas juste une note.</h2>
+            <p class="txt mt24 fs-19 mw-500">
+              Pour 1 000 visites par mois et 3 pages par visite, l'empreinte annuelle du site passe d'environ
+              69 kg à 46 kg de CO₂e. C'est l'équivalent d'à peu près 115 km en voiture évités chaque année,
+              rien qu'en allégeant les pages.
+            </p>
+            <p class="txt mt16 fs-15 mw-500">
+              On s'appuie sur des référentiels reconnus : EcoIndex (Green IT) pour la mesure, le RGESN pour
+              l'écoconception et le RGAA pour l'accessibilité.
+            </p>
+          </div>
+          <div class="flex col gap-16">
+            <div class="card c-strong r-24">
+              <div class="big">−95 %</div>
+              <p class="txt mt8">de données transférées par page</p>
+            </div>
+            <div class="card c-accent r-24">
+              <div class="big">−33 %</div>
+              <p class="txt mt8">de CO₂e par page vue</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap sec">
+        <div class="eyebrow">En toute transparence</div>
+        <h2 class="h2s mt16">Les limites de notre mesure.</h2>
+        <div class="mt32">
+          <div class="timeline-row">
+            <div class="y">Mesure</div>
+            <p>
+              EcoIndex donne un ordre de grandeur, pas une mesure exacte : il part d'une page moyenne et
+              suppose une connexion fixe.
+            </p>
+          </div>
+          <div class="timeline-row">
+            <div class="y">Contenu</div>
+            <p>
+              Le gain se confirmera quand toutes les vraies images et les contenus définitifs seront en ligne.
+              On garde la note A comme garde-fou.
+            </p>
+          </div>
+          <div class="timeline-row">
+            <div class="y">À finir</div>
+            <p>
+              L'hébergement chez un fournisseur européen et la traduction restent à mettre en place : ils
+              feront partie de la version finale.
+            </p>
+          </div>
+        </div>
+        <div class="row mt40">
+          <a class="btn btn-lg btn-accent" href="adherer.html">Soutenir la démarche</a>
+          <a class="btn btn-lg btn-ghost" href="actions.html">Voir nos actions</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="ftr">
+      <div class="wrap">
+        <div class="ftr-grid">
+          <div>
+            <div class="fw-800 fs-22">citoyens de la terre</div>
+            <p class="txt mt12">36 traverse des Fabres<br />13011 Marseille</p>
+          </div>
+          <div>
+            <h4>Nous écrire</h4>
+            <p class="txt mt12">06 61 77 29 00<br />contact@citoyensdelaterre.org</p>
+            <a class="u accent mt8 ib fw-700" href="contact.html">Formulaire de contact →</a>
+          </div>
+          <div>
+            <h4>Nous suivre</h4>
+            <a class="u accent mt12 ib fw-700" data-toast="Lien Facebook à ajouter." href="#">Facebook →</a>
+          </div>
+        </div>
+        <div class="eco">
+          <img alt="" height="28" src="assets/icons/eco.svg" width="28" />
+          <p>
+            <b>Site éco-conçu.</b>
+            <span class="txt"
+              >Une seule police, icônes en SVG, aucune vidéo ni tracker, pages légères notées A sur
+              EcoIndex.</span
+            >
+            <a class="u accent fw-700" href="eco-conception.html">En savoir plus →</a>
+          </p>
+        </div>
+        <div class="legal mt32">
+          <a data-toast="Page « Mentions légales » à rédiger." href="#">Mentions légales</a
+          ><a data-toast="Page « Confidentialité » à rédiger." href="#">Confidentialité</a
+          ><a data-toast="Plan du site à venir." href="#">Plan du site</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

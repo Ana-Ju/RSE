@@ -1,0 +1,34 @@
+[
+  {
+    "nom": "Renaturation de la ripisylve de l'Huveaune",
+    "lieu": "Vallée de l'Huveaune, Marseille",
+    "resume": "Formation-action pour fabriquer des bacs autonomes et planter des espèces adaptées à la biodiversité locale.",
+    "lien": "actus.html#provence",
+    "lat": 43.287,
+    "lng": 5.46
+  },
+  {
+    "nom": "Atelier eau et biodiversité",
+    "lieu": "Centre de production d'eau potable de Sainte-Marthe, Marseille 14e",
+    "resume": "Visite de terrain et atelier d'intelligence territoriale : économies d'eau, réutilisation des eaux usées, solutions fondées sur la nature.",
+    "lien": "actus.html#evenements",
+    "lat": 43.339,
+    "lng": 5.393
+  },
+  {
+    "nom": "Atelier économie circulaire",
+    "lieu": "La Valentine, Marseille 11e",
+    "resume": "Avec l'écosystème Symbiose Vallée : une opportunité d'innovation pour les entreprises citoyennes et le territoire.",
+    "lien": "actions.html",
+    "lat": 43.291,
+    "lng": 5.481
+  },
+  {
+    "nom": "Assemblée générale citoyenne",
+    "lieu": "Château de Bois Luzy, Marseille 12e",
+    "resume": "Un temps fort de la vie de l'association, ouvert aux citoyens du territoire.",
+    "lien": "actus.html#evenements",
+    "lat": 43.307,
+    "lng": 5.439
+  }
+]
