@@ -52,8 +52,25 @@ content:
         label: Résumé (1 ou 2 phrases)
         type: text
       - name: lien
-        label: Lien vers l'activité (ex. actions.html)
-        type: string
+        label: Page vers laquelle le point renvoie
+        description: Choisis la page du site qui parle de cette action. Le visiteur y arrive en cliquant sur « Voir l'activité » dans le point.
+        type: select
+        options:
+          values:
+            - name: actions.html
+              label: Nos actions
+            - name: actus.html
+              label: Actualités
+            - name: actus.html#evenements
+              label: Actualités — Agenda / Événements
+            - name: actus.html#provence
+              label: Actualités — En Provence
+            - name: asso.html
+              label: L'association
+            - name: adherer.html
+              label: Adhérer
+            - name: contact.html
+              label: Contact
       - name: lat
         label: Latitude (ex. 43.296)
         type: number
