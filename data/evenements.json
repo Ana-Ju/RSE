@@ -35,5 +35,14 @@
     "horaires": "10h00",
     "resume": "Rencontre entre membres pour partager de bonnes infos",
     "partenaires": "Telecom SUdparis"
+  },
+  {
+    "titre": "Colaboration to locals",
+    "date": "2026-11-26",
+    "horaires": "08h30-10h40",
+    "lieu": "Paris",
+    "resume": "Group activity.",
+    "partenaires": "Orange",
+    "lien_inscription": "https://ana-ju.github.io/RSE/index.html"
   }
 ]
